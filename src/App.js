@@ -21,22 +21,53 @@ async componentDidMount(){
 
     return(
       <div>
-        <h1>Tabela</h1>
-        {tabela.map(tabela => (
-          <li key={tabela.posicao}>
-            <h2>
-            {tabela.time.nome_popular}
-            </h2>
-            <p>
-              {tabela.posicao}
-            </p>
+        <div class="container"></div>
 
-          </li>
-        ))}
+        <div class="Time list-Time">
+         <h5 class="Time-header" >Classificação</h5>
+        <div class="Time-body">
+
+        <table class="table">
+        <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Time</th>
+                <th scope="col">Pontos</th>
+                <th scope="col">Jogos</th>
+                <th scope="col">Vitórias</th>
+                <th scope="col">Últimos Jogos</th>
+              </tr>
+            </thead>
+
+
+            {tabela.map(tabela => (
+            <tbody>
+             <tr key={tabela.posicao}>
+                <th scope="col">{tabela.posicao}</th>
+                <td>{tabela.time.nome_popular}</td>
+                <td>{tabela.pontos}</td>
+                <td>{tabela.jogos}</td>
+                <td>{tabela.vitorias}</td>       
+                <td>{tabela.ultimos_jogos}</td>    
+              </tr>
+            </tbody>
+            ))}
+
+            </table>
+            </div>
+            </div>
+            
+            
+
+
+
       </div>
+      
+      
     );
   };
 };
+
 
   
 
