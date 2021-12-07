@@ -1,0 +1,18 @@
+
+.breadcrumb{
+    justify-content: space-around;
+    background-image: linear-gradient(to right, rgb(0, 250, 178), rgb(5, 145, 245));
+    font-size: 30px;
+  }
+  .breadcrumb-item.active {
+      color: #333333;
+      
+  }
+  
+  .Time-header{
+    text-align: center;
+  }
+  
+  .ultimas{
+    color: green;
+  }
