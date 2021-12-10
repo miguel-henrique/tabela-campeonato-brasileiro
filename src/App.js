@@ -19,6 +19,28 @@ async componentDidMount(){
 
     const { tabela } = this.state;
 
+      //Função para mudar estilo
+     function teste(){
+    let resultado = tabela.ultimos_jogos;
+
+      for (let i = 0; i < resultado.length; i++) {
+      if (resultado[i] = "v" ? 'currently' : 'not') 
+      {
+    return('vitória');
+           } 
+    if (resultado[i] = "e" ? 'currently' : 'not') 
+      {
+    return('empate');
+           }
+    
+    if (resultado[i] = "d" ? 'currently' : 'not')
+      {
+    return('derrota'); 
+           }  
+       }
+    
+    }
+    teste(tabela)
 
     return(
 
@@ -55,8 +77,8 @@ async componentDidMount(){
                 <td>{tabela.time.nome_popular}</td>
                 <td>{tabela.pontos}</td>
                 <td>{tabela.jogos}</td>
-                <td>{tabela.vitorias}</td>       
-                <td>{tabela.ultimos_jogos}</td>    
+                <td>{tabela.vitorias}</td>                   
+                <td>{teste}</td>   
               </tr>
             </tbody>
             ))}
