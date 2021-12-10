@@ -20,27 +20,27 @@ async componentDidMount(){
     const { tabela } = this.state;
 
       //Função para mudar estilo
-     function teste(){
-    let resultado = tabela.ultimos_jogos;
+     function filtraResult(){
+    let resultado = ["v","d","v","e"];
 
       for (let i = 0; i < resultado.length; i++) {
-      if (resultado[i] = "v" ? 'currently' : 'not') 
+      if (resultado[i] === "v") 
       {
-    return('vitória');
+    console.log('vitória');
            } 
-    if (resultado[i] = "e" ? 'currently' : 'not') 
+    if (resultado[i] === "e") 
       {
-    return('empate');
+    console.log('empate');
            }
     
-    if (resultado[i] = "d" ? 'currently' : 'not')
+    if (resultado[i] === "d")
       {
-    return('derrota'); 
+    console.log('derrota'); 
            }  
        }
     
     }
-    teste(tabela)
+    filtraResult(tabela)
 
     return(
 
@@ -78,7 +78,7 @@ async componentDidMount(){
                 <td>{tabela.pontos}</td>
                 <td>{tabela.jogos}</td>
                 <td>{tabela.vitorias}</td>                   
-                <td>{teste}</td>   
+                <td>{filtraResult(tabela)}</td>   
               </tr>
             </tbody>
             ))}
