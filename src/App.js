@@ -74,7 +74,7 @@ async componentDidMount(){
             <tbody>
              <tr key={tabela.posicao}>
                 <th scope="col">{tabela.posicao}</th>
-                <td>{tabela.time.nome_popular}</td>
+                <td><img src={tabela.time.escudo} width={20} alt="img"/> {tabela.time.nome_popular}</td>
                 <td>{tabela.pontos}</td>
                 <td>{tabela.jogos}</td>
                 <td>{tabela.vitorias}</td>                                
@@ -84,7 +84,8 @@ async componentDidMount(){
                  {tabela.ultimos_jogos[3] === "v" ? <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/50/ffffff/external-check-banking-and-finance-kiranshastry-lineal-color-kiranshastry.png" width={20} alt="img"/> : <img src="https://img.icons8.com/ios-glyphs/30/ffffff/xbox-x.png" width={20} alt="img"/>}
                  {tabela.ultimos_jogos[4] === "v" ? <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/50/ffffff/external-check-banking-and-finance-kiranshastry-lineal-color-kiranshastry.png" width={20} alt="img"/> : <img src="https://img.icons8.com/ios-glyphs/30/ffffff/xbox-x.png" width={20} alt="img"/>}
                  {tabela.ultimos_jogos[5] === "v" ? <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/50/ffffff/external-check-banking-and-finance-kiranshastry-lineal-color-kiranshastry.png" width={20} alt="img"/> : <img src="https://img.icons8.com/ios-glyphs/30/ffffff/xbox-x.png" width={20} alt="img"/>}
-               </td>   
+               </td>  
+               
               </tr>
             </tbody>
             ))}
