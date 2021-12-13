@@ -19,28 +19,28 @@ async componentDidMount(){
 
     const { tabela } = this.state;
 
-      //Função para mudar estilo
-     function filtraResult(){
-    let resultado = ["v","d","v","e"];
-
-      for (let i = 0; i < resultado.length; i++) {
-      if (resultado[i] === "v") 
+/* function verultimas() {
+  
+//let ultimos = ["d","d","e",];
+  
+           for (let ultimo of verultimas()) {
+            if (ultimo === "v") 
+            {
+          return('vitória');
+                 }
+            if (ultimo === "e") 
       {
-    console.log('vitória');
-           } 
-    if (resultado[i] === "e") 
-      {
-    console.log('empate');
+        return('empate');
            }
     
-    if (resultado[i] === "d")
+             if (ultimo === "d")
       {
-    console.log('derrota'); 
-           }  
-       }
-    
+        return('derrota'); 
+           } 
     }
-    filtraResult(tabela)
+} */
+
+//const vitoria = tabela.ultimos_jogos["v"];
 
     return(
 
@@ -77,8 +77,14 @@ async componentDidMount(){
                 <td>{tabela.time.nome_popular}</td>
                 <td>{tabela.pontos}</td>
                 <td>{tabela.jogos}</td>
-                <td>{tabela.vitorias}</td>                   
-                <td>{filtraResult(tabela)}</td>   
+                <td>{tabela.vitorias}</td>                                
+               <td>
+                 {tabela.ultimos_jogos[1] === "v" ? <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/50/ffffff/external-check-banking-and-finance-kiranshastry-lineal-color-kiranshastry.png" width={20} alt="img"/> : <img src="https://img.icons8.com/ios-glyphs/30/ffffff/xbox-x.png" width={20} alt="img"/>}
+                 {tabela.ultimos_jogos[2] === "v" ? <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/50/ffffff/external-check-banking-and-finance-kiranshastry-lineal-color-kiranshastry.png" width={20} alt="img"/> : <img src="https://img.icons8.com/ios-glyphs/30/ffffff/xbox-x.png" width={20} alt="img"/>}
+                 {tabela.ultimos_jogos[3] === "v" ? <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/50/ffffff/external-check-banking-and-finance-kiranshastry-lineal-color-kiranshastry.png" width={20} alt="img"/> : <img src="https://img.icons8.com/ios-glyphs/30/ffffff/xbox-x.png" width={20} alt="img"/>}
+                 {tabela.ultimos_jogos[4] === "v" ? <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/50/ffffff/external-check-banking-and-finance-kiranshastry-lineal-color-kiranshastry.png" width={20} alt="img"/> : <img src="https://img.icons8.com/ios-glyphs/30/ffffff/xbox-x.png" width={20} alt="img"/>}
+                 {tabela.ultimos_jogos[5] === "v" ? <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/50/ffffff/external-check-banking-and-finance-kiranshastry-lineal-color-kiranshastry.png" width={20} alt="img"/> : <img src="https://img.icons8.com/ios-glyphs/30/ffffff/xbox-x.png" width={20} alt="img"/>}
+               </td>   
               </tr>
             </tbody>
             ))}
