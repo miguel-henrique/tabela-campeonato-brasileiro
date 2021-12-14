@@ -79,12 +79,34 @@ async componentDidMount(){
                 <td>{tabela.jogos}</td>
                 <td>{tabela.vitorias}</td>                                
                <td>
-                 {tabela.ultimos_jogos[1] === "v" ? <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/50/ffffff/external-check-banking-and-finance-kiranshastry-lineal-color-kiranshastry.png" width={20} alt="img"/> : <img src="https://img.icons8.com/ios-glyphs/30/ffffff/xbox-x.png" width={20} alt="img"/>}
-                 {tabela.ultimos_jogos[2] === "v" ? <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/50/ffffff/external-check-banking-and-finance-kiranshastry-lineal-color-kiranshastry.png" width={20} alt="img"/> : <img src="https://img.icons8.com/ios-glyphs/30/ffffff/xbox-x.png" width={20} alt="img"/>}
-                 {tabela.ultimos_jogos[3] === "v" ? <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/50/ffffff/external-check-banking-and-finance-kiranshastry-lineal-color-kiranshastry.png" width={20} alt="img"/> : <img src="https://img.icons8.com/ios-glyphs/30/ffffff/xbox-x.png" width={20} alt="img"/>}
-                 {tabela.ultimos_jogos[4] === "v" ? <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/50/ffffff/external-check-banking-and-finance-kiranshastry-lineal-color-kiranshastry.png" width={20} alt="img"/> : <img src="https://img.icons8.com/ios-glyphs/30/ffffff/xbox-x.png" width={20} alt="img"/>}
-                 {tabela.ultimos_jogos[5] === "v" ? <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/50/ffffff/external-check-banking-and-finance-kiranshastry-lineal-color-kiranshastry.png" width={20} alt="img"/> : <img src="https://img.icons8.com/ios-glyphs/30/ffffff/xbox-x.png" width={20} alt="img"/>}
-               </td>  
+               {tabela.ultimos_jogos[0] === "v" ? <img src="../img/vitoria.svg"  alt="img"/> : "" || 
+                  tabela.ultimos_jogos[0] === "e" ? <img src="../img/empate.svg"  alt="img"/> : "" ||  
+                  tabela.ultimos_jogos[0] === "d" ? <img src="../img/derrota.svg"  alt="img"/> : ""
+                  } 
+
+                  {tabela.ultimos_jogos[1] === "v" ? <img src="../img/vitoria.svg"  alt="img"/> : "" || 
+                  tabela.ultimos_jogos[1] === "e" ? <img src="../img/empate.svg"  alt="img"/> : "" ||  
+                  tabela.ultimos_jogos[1] === "d" ? <img src="../img/derrota.svg"  alt="img"/> : ""
+                  } 
+                  
+                  {tabela.ultimos_jogos[2] === "v" ? <img src="../img/vitoria.svg"  alt="img"/> : "" || 
+                  tabela.ultimos_jogos[2] === "e" ? <img src="../img/empate.svg"  alt="img"/> : "" ||  
+                  tabela.ultimos_jogos[2] === "d" ? <img src="../img/derrota.svg"  alt="img"/> : ""
+                  } 
+
+                  {tabela.ultimos_jogos[3] === "v" ? <img src="../img/vitoria.svg"  alt="img"/> : "" || 
+                  tabela.ultimos_jogos[3] === "e" ? <img src="../img/empate.svg"  alt="img"/> : "" ||  
+                  tabela.ultimos_jogos[3] === "d" ? <img src="../img/derrota.svg"  alt="img"/> : ""
+                  } 
+
+                  {tabela.ultimos_jogos[4] === "v" ? <img src="../img/vitoria.svg"  alt="img"/> : "" || 
+                  tabela.ultimos_jogos[4] === "e" ? <img src="../img/empate.svg" alt="img"/> : "" ||  
+                  tabela.ultimos_jogos[4] === "d" ? <img src="../img/derrota.svg" alt="img"/> : ""
+                  }
+                 
+                
+                 
+               </td>
                
               </tr>
             </tbody>
