@@ -60,7 +60,6 @@ async componentDidMount(){
         <table class="table">
         <thead>
               <tr>
-                <th scope="col"></th>
                 <th scope="col">Time</th>
                 <th scope="col">Pontos</th>
                 <th scope="col">Jogos</th>
@@ -73,8 +72,7 @@ async componentDidMount(){
             {tabela.map(tabela => (
             <tbody>
              <tr key={tabela.posicao}>
-                <th scope="col">{tabela.posicao}</th>
-                <td><img src={tabela.time.escudo} width={20} alt="img"/> {tabela.time.nome_popular}</td>
+                <td>{tabela.posicao} <img src={tabela.time.escudo} width={20} alt="img"/> {tabela.time.nome_popular}</td>
                 <td>{tabela.pontos}</td>
                 <td>{tabela.jogos}</td>
                 <td>{tabela.vitorias}</td>                                
